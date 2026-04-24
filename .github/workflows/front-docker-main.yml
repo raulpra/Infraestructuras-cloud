@@ -34,9 +34,10 @@ jobs:
       uses: docker/metadata-action@v5
       with:
         images: raulpra/front-temperaturas
+        flavor: |
+          latest=false
         tags: |
-          type=sha
-          type=ref,event=branch
+          type=raw,value=00
 
     - name: Build and Push to Docker Hub
       uses: docker/build-push-action@v5

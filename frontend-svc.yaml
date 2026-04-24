@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: temperaturas-frontend
+  labels: 
+    app: temperaturas-frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: temperaturas-frontend
+  ports:
+    - port: 80
+      targetPort: 3001

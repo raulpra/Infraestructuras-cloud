@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: temperaturas-backend
+  labels:
+    app: temperaturas-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: temperaturas-backend
+  template:
+    metadata:
+      labels:
+        app: temperaturas-backend
+    spec:
+      containers:
+        - name: temperaturas-k8s
+          image: raulpra/back-temperaturas
+          ports:
+            - containerPort: 5000

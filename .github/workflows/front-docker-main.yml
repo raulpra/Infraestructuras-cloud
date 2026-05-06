@@ -65,4 +65,3 @@ jobs:
       run: |
         kubectl apply -f frontend-deployment.yaml
         kubectl apply -f frontend-svc.yaml
-        kubectl rollout restart deployment temperaturas-frontend

@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: temperaturas-k8s
-        image: raulpra/front-temperaturas:00
-        imagePullPolicy: Always
+        image: raulpra/front-temperaturas
         ports:
             - containerPort: 3001
         
